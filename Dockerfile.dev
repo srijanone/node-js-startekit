@@ -1,0 +1,12 @@
+ARG NODE_VERSION=12
+ARG BASE_VERSION=buster
+FROM srijanlabs/node:${NODE_VERSION}-${BASE_VERSION}-dev
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm i \
+    && npm rebuild
+
+CMD [ "node", "app.js" ]
