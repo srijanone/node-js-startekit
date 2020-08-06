@@ -27,28 +27,11 @@ services:
         NODE_VERSION: ${NODE_VERSION}
     image: srijanlabs/node:${NODE_VERSION}-buster-local
     container_name: ${PROJECT_NAME}_backend
-    command: ["npm", "start"]
+    command: ["npm", "run", "debug"]
     working_dir: /app
     ports: 
       - ${APPLICATION_PORT}:3000
-    depends_on:
-      - postgres
+      - 9229:9229
     volumes: *app-volumes
-    networks: *app-networks
-    env_file:  *app-envsfile
-  
-  postgres:
-    image: postgres:12.3-alpine
-    container_name: ${PROJECT_NAME}_postgres
-    ports:
-      - 5432:5432
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
-    environment:
-      - PGDATA=/var/lib/postgresql/data/pgdata
-      - POSTGRES_USER=${DB_USER}
-      - POSTGRES_DB=${DB_NAME}
-      - POSTGRES_PASSWORD=${DB_PASSWORD}
-
     networks: *app-networks
     env_file:  *app-envsfile
