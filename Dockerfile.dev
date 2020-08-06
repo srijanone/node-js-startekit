@@ -9,4 +9,5 @@ COPY . .
 RUN npm i \
     && npm rebuild
 
-CMD [ "node", "app.js" ]
+# Add debug script to package.json to start app in debug mode
+CMD [ "npm", "run", "debug" ]

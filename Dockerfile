@@ -13,4 +13,4 @@ FROM srijanlabs/node:${NODE_VERSION}-buster
 COPY . /app
 COPY --from=builder --chown=continua /app/node_modules /app/
 
-CMD [ "node", "app.js" ]
+CMD [ "node", "index.js" ]
