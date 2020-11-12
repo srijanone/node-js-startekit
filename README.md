@@ -1,6 +1,6 @@
 # Introduction
 
-NodeJS Starterkit provides developers an ability to get a containered nodejs application on local systems and helps them to deploy to to Kubernetes with minimal or no understanding of Kubernetes. The starterkit is build using Docker and Kubernetes best practices and hence developers can just write application logic without worrying about Docker and Kubernetes complexities.
+NodeJS Starterkit provides developers an ability to get a containered nodejs application on local systems and helps them to deploy to to Kubernetes with minimal or no understanding of Kubernetes. The starterkit is build using Docker and Kubernetes best practices and hence developers can just write application logic without worrying about Docker and Kubernetes complexities...
 
 # Local Development using Docker and docker-compose
 Node Js Starterkit can be used to set up a containerized node web applications on your local system using docker-compose.
